@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شرکت مراقبتی و حفاظتی موثق</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap");
+
+      * {
+        font-family: "Vazirmatn", sans-serif;
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+      .service-card {
+        transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+          box-shadow 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+      }
+      .service-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 12px 32px 0 rgba(59, 130, 246, 0.15),
+          0 2px 4px 0 rgba(0, 0, 0, 0.06);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .nav-link:hover {
+        color: #3b82f6;
+        transition: color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <div
+                class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center ml-3"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 2L3 7v11a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V7l-7-5z"
+                  />
+                </svg>
+              </div>
+              <span class="text-xl font-bold text-gray-800"
+                >شرکت مراقبتی و حفاظتی موثق</span
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="flex items-baseline space-x-4 space-x-reverse">
+              <a
+                href="#home"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >خانه</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >خدمات</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >درباره ما</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >تماس</a
+              >
+            </div>
+          </div>
+          <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home" class="block px-3 py-2 text-gray-700">خانه</a>
+          <a href="#services" class="block px-3 py-2 text-gray-700">خدمات</a>
+          <a href="#about" class="block px-3 py-2 text-gray-700">درباره ما</a>
+          <a href="#contact" class="block px-3 py-2 text-gray-700">تماس</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center fade-in">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            امنیت و آرامش شما، اولویت ماست
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-blue-100">
+            خدمات مراقبتی و حفاظتی ۲۴ ساعته با بالاترین کیفیت
+          </p>
+          <div class="space-x-4 space-x-reverse">
+            <button
+              onclick="scrollToSection('contact')"
+              class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300"
+            >
+              درخواست مشاوره
+            </button>
+            <button
+              onclick="scrollToSection('services')"
+              class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300"
+            >
+              مشاهده خدمات
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            خدمات ما
+          </h2>
+          <p class="text-lg text-gray-600">
+            مجموعه کاملی از خدمات امنیتی و حفاظتی
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              نظارت ۲۴ ساعته
+            </h3>
+            <p class="text-gray-600">
+              سیستم‌های پیشرفته نظارت تصویری و کنترل دسترسی با پایش مداوم
+            </p>
+          </div>
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 8a6 6 0 01-7.743 5.743L10 14l-.257-.257A6 6 0 0118 8zM2 8a6 6 0 1010.743 5.743L12 14l-.257-.257A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              نگهبانی فیزیکی
+            </h3>
+            <p class="text-gray-600">
+              نیروهای آموزش‌دیده و مجرب برای حفاظت فیزیکی اماکن و تأسیسات
+            </p>
+          </div>
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-red-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              سیستم اعلام حریق
+            </h3>
+            <p class="text-gray-600">
+              نصب و نگهداری سیستم‌های پیشرفته اعلام و اطفای حریق
+            </p>
+          </div>
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              کنترل دسترسی
+            </h3>
+            <p class="text-gray-600">
+              سیستم‌های هوشمند کنترل ورود و خروج با تکنولوژی‌های مدرن
+            </p>
+          </div>
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              پاسخگویی اضطراری
+            </h3>
+            <p class="text-gray-600">
+              واکنش سریع در مواقع اضطراری و ارتباط مستقیم با مراکز امنیتی
+            </p>
+          </div>
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div
+              class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-indigo-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              مشاوره امنیتی
+            </h3>
+            <p class="text-gray-600">
+              ارزیابی ریسک و ارائه راهکارهای بهینه امنیتی متناسب با نیاز شما
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              درباره شرکت موثق
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              با بیش از ۱۵ سال تجربه در زمینه خدمات امنیتی و حفاظتی، شرکت امن
+              پارس به عنوان یکی از پیشروان این صنعت، خدمات جامع و با کیفیتی را
+              به مشتریان خود ارائه می‌دهد.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              تیم متخصص ما با استفاده از جدیدترین تکنولوژی‌ها و روش‌های نوین،
+              امنیت و آرامش شما را تضمین می‌کند.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">۱۵+</div>
+                <div class="text-gray-600">سال تجربه</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">۲۴/۷</div>
+                <div class="text-gray-600">پشتیبانی</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">۱۰۰%</div>
+                <div class="text-gray-600">رضایت مشتری</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">چرا موثق؟</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center ml-3 mt-1"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">تجربه و تخصص</h4>
+                  <p class="text-gray-600">
+                    سال‌ها تجربه در ارائه خدمات امنیتی
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center ml-3 mt-1"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">تکنولوژی پیشرفته</h4>
+                  <p class="text-gray-600">
+                    استفاده از جدیدترین تجهیزات و سیستم‌ها
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center ml-3 mt-1"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">پشتیبانی ۲۴ ساعته</h4>
+                  <p class="text-gray-600">
+                    آماده خدمت‌رسانی در تمام ساعات شبانه‌روز
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center ml-3 mt-1"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">قیمت مناسب</h4>
+                  <p class="text-gray-600">ارائه بهترین خدمات با قیمت رقابتی</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            تماس با ما
+          </h2>
+          <p class="text-lg text-gray-600">
+            برای دریافت مشاوره رایگان با ما در تماس باشید
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <div class="bg-gray-50 p-8 rounded-xl">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                اطلاعات تماس
+              </h3>
+              <div class="space-y-6">
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center ml-4"
+                  >
+                    <svg
+                      class="w-6 h-6 text-blue-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">تلفن تماس</h4>
+                    <p class="text-gray-600">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center ml-4"
+                  >
+                    <svg
+                      class="w-6 h-6 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">ایمیل</h4>
+                    <p class="text-gray-600">info@amnpars.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center ml-4"
+                  >
+                    <svg
+                      class="w-6 h-6 text-red-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">آدرس</h4>
+                    <p class="text-gray-600">تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center ml-4"
+                  >
+                    <svg
+                      class="w-6 h-6 text-purple-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">ساعات کاری</h4>
+                    <p class="text-gray-600">۲۴ ساعته، ۷ روز هفته</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form
+              class="bg-gray-50 p-8 rounded-xl"
+              onsubmit="handleSubmit(event)"
+            >
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                درخواست مشاوره رایگان
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >نام و نام خانوادگی</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >شماره تماس</label
+                  >
+                  <input
+                    type="tel"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >نوع خدمت مورد نیاز</label
+                  >
+                  <select
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">انتخاب کنید</option>
+                    <option value="surveillance">نظارت ۲۴ ساعته</option>
+                    <option value="security">نگهبانی فیزیکی</option>
+                    <option value="fire">سیستم اعلام حریق</option>
+                    <option value="access">کنترل دسترسی</option>
+                    <option value="emergency">پاسخگویی اضطراری</option>
+                    <option value="consultation">مشاوره امنیتی</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >توضیحات</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="لطفاً نیاز خود را شرح دهید..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+                >
+                  ارسال درخواست
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center ml-3"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 2L3 7v11a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V7l-7-5z"
+                  />
+                </svg>
+              </div>
+              <span class="text-xl font-bold">موثق</span>
+            </div>
+            <p class="text-gray-300">
+              ارائه‌دهنده خدمات مراقبتی و حفاظتی با بالاترین کیفیت و اعتماد
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">خدمات</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>نظارت ۲۴ ساعته</li>
+              <li>نگهبانی فیزیکی</li>
+              <li>سیستم اعلام حریق</li>
+              <li>کنترل دسترسی</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">لینک‌های مفید</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#home" class="hover:text-blue-400">خانه</a></li>
+              <li><a href="#services" class="hover:text-blue-400">خدمات</a></li>
+              <li>
+                <a href="#about" class="hover:text-blue-400">درباره ما</a>
+              </li>
+              <li><a href="#contact" class="hover:text-blue-400">تماس</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">تماس با ما</h3>
+            <div class="space-y-2 text-gray-300">
+              <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+              <p>آدرس: گرگان</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300"
+        >
+          <p>&copy; ۱۴۰۴ شرکت مراقبتی و محافظتی موثق. تمامی حقوق محفوظ است.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
