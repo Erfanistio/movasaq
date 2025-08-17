@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شرکت مراقبتی و حفاظتی موثق</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <div
+                class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center ml-3"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 2L3 7v11a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V7l-7-5z"
+                  />
+                </svg>
+              </div>
+              <button><a href="/index.html" class="text-xl font-bold text-gray-800"
+                >شرکت مراقبتی و حفاظتی موثق</a
+              ></button>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="flex items-baseline space-x-4 space-x-reverse">
+              <a
+                href="/pages/resume.html"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >همکاری های ما</a
+              >
+              <a
+                href="/pages/application.html"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >اسختدام</a
+              >
+              <a
+                href="/pages/application.html"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >اعضای هیئت مدیره</a
+              >
+            </div>
+          </div>
+          <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home" class="block px-3 py-2 text-gray-700">خانه</a>
+          <a href="#services" class="block px-3 py-2 text-gray-700">خدمات</a>
+          <a href="#about" class="block px-3 py-2 text-gray-700">درباره ما</a>
+          <a href="#contact" class="block px-3 py-2 text-gray-700">تماس</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- بخش اعضای هیئت مدیره -->
+    <section id="board" class="py-16 bg-gray-100 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-center mb-10">اعضای هیئت مدیره</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- کارت عضو -->
+          <!-- Teacher Card 1 -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 text-center cursor-pointer hover:shadow-xl transition"
+            onclick="openModal('modal2')"
+          >
+            <img
+              src="https://fastly.picsum.photos/id/1031/200/300.jpg?hmac=HVS-5o6kRugo6EcoZhPEsxm8Jnl7-J5tuEc20pN029c"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 class="text-lg font-semibold">دکتر سارا محمدی</h3>
+            <p class="text-gray-500">عضو هیئت مدیره</p>
+          </div>
+          <!-- Modal 1 -->
+          <div
+            id="teacher1"
+            class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50"
+          >
+            <div
+              class="bg-white rounded-xl p-8 max-w-md w-full text-right relative"
+            >
+              <!-- دکمه بستن -->
+              <button
+                class="absolute top-3 left-3 text-gray-600 hover:text-black"
+                onclick="closeModal('teacher1')"
+              >
+                ✕
+              </button>
+
+              <!-- محتوای مودال (بدون عکس) -->
+              <h2 class="text-xl font-bold mb-2">آقای رحمانی</h2>
+              <p class="text-gray-500 mb-4">مدرس ریاضیات</p>
+              <p class="text-gray-700 leading-relaxed">
+                دارای ۱۰ سال تجربه تدریس در مقطع دبیرستان و کنکور، متخصص در
+                آموزش مفهومی ریاضیات و آماده‌سازی دانش‌آموزان برای آزمون‌های
+                مهم.
+              </p>
+            </div>
+          </div>
+
+          <!-- کارت عضو -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 text-center cursor-pointer hover:shadow-xl transition"
+            onclick="openModal('modal2')"
+          >
+            <img
+              src="https://fastly.picsum.photos/id/1031/200/300.jpg?hmac=HVS-5o6kRugo6EcoZhPEsxm8Jnl7-J5tuEc20pN029c"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+              alt="عضو ۲"
+            />
+            <h3 class="text-lg font-semibold">دکتر سارا محمدی</h3>
+            <p class="text-gray-500">عضو هیئت مدیره</p>
+          </div>
+
+          <!-- کارت عضو -->
+          <div
+            class="bg-white shadow-lg rounded-xl p-6 text-center cursor-pointer hover:shadow-xl transition"
+            onclick="openModal('modal3')"
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+              alt="عضو ۳"
+            />
+            <h3 class="text-lg font-semibold">مهندس حسن کریمی</h3>
+            <p class="text-gray-500">عضو هیئت مدیره</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- مودال‌ها -->
+    <div
+      id="modal1"
+      class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50"
+    >
+      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center relative">
+        <button
+          class="absolute top-3 left-3 text-gray-600 hover:text-black"
+          onclick="closeModal('modal1')"
+        >
+          ✕
+        </button>
+        <h2 class="text-xl font-bold mb-4">مهندس علی رضایی</h2>
+        <p class="text-gray-600">
+          مدیرعامل شرکت موثق با بیش از ۱۵ سال تجربه در حوزه امنیت و مدیریت
+          پروژه‌های حفاظتی.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal2"
+      class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50"
+    >
+      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center relative">
+        <button
+          class="absolute top-3 left-3 text-gray-600 hover:text-black"
+          onclick="closeModal('modal2')"
+        >
+          ✕
+        </button>
+        <h2 class="text-xl font-bold mb-4">دکتر سارا محمدی</h2>
+        <p class="text-gray-600">
+          عضو هیئت مدیره و مشاور استراتژیک در زمینه توسعه سیستم‌های نظارتی و
+          کنترل.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal3"
+      class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50"
+    >
+      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center relative">
+        <button
+          class="absolute top-3 left-3 text-gray-600 hover:text-black"
+          onclick="closeModal('modal3')"
+        >
+          ✕
+        </button>
+        <h2 class="text-xl font-bold mb-4">مهندس حسن کریمی</h2>
+        <p class="text-gray-600">
+          متخصص امنیت و عضو هیئت مدیره با سابقه طراحی سیستم‌های حفاظتی.
+        </p>
+      </div>
+    </div>
+
+    <!-- اسکریپت -->
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+        document.getElementById(id).classList.add("flex");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+        document.getElementById(id).classList.remove("flex");
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 fixed bottom-0 left-0 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center ml-3"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 2L3 7v11a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V7l-7-5z"
+                  />
+                </svg>
+              </div>
+              <span class="text-xl font-bold">موثق</span>
+            </div>
+            <p class="text-gray-300">
+              ارائه‌دهنده خدمات مراقبتی و حفاظتی با بالاترین کیفیت و اعتماد
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">خدمات</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>نظارت ۲۴ ساعته</li>
+              <li>نگهبانی فیزیکی</li>
+              <li>سیستم اعلام حریق</li>
+              <li>کنترل دسترسی</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">لینک‌های مفید</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#home" class="hover:text-blue-400">خانه</a></li>
+              <li><a href="#services" class="hover:text-blue-400">خدمات</a></li>
+              <li>
+                <a href="#about" class="hover:text-blue-400">درباره ما</a>
+              </li>
+              <li><a href="#contact" class="hover:text-blue-400">تماس</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">تماس با ما</h3>
+            <div class="space-y-2 text-gray-300">
+              <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+              <p>آدرس: گرگان</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300"
+        >
+          <p>&copy; ۱۴۰۴ شرکت مراقبتی و محافظتی موثق. تمامی حقوق محفوظ است.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

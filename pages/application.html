@@ -5,72 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>استخدام - شرکت امن پارس</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              vazir: ["Vazir", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="/main.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap");
-
-      * {
-        font-family: "Vazirmatn", sans-serif;
-      }
-      .hero-gradient {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      }
-      .job-card:hover {
-        transform: translateY(-5px);
-        transition: all 0.3s ease;
-      }
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.6s ease forwards;
-      }
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .nav-link:hover {
-        color: #3b82f6;
-        transition: color 0.3s ease;
-      }
-      .modal {
-        display: none;
-      }
-      .modal.active {
-        display: flex;
-      }
-      .filter-btn.active {
-        background-color: #3b82f6;
-        color: white;
-      }
-      .status-pending {
-        background-color: #fbbf24;
-      }
-      .status-reviewing {
-        background-color: #3b82f6;
-      }
-      .status-accepted {
-        background-color: #10b981;
-      }
-      .status-rejected {
-        background-color: #ef4444;
-      }
-    </style>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation -->
@@ -384,5 +323,6 @@
         }
       })();
     </script>
+    <script src="/script.js"></script>
   </body>
 </html>
