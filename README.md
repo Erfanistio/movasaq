@@ -26,6 +26,6 @@ For a production build, run `npm run build`, then `npm start`. Deployment config
 
 ## Working context
 
-Read `docs/CONTINUE.md` before continuing development. The separate private chat archive can be copied from the original computer and extracted to `.device-transfer/` in this checkout. It is excluded from Git because this repository is public.
+Read `docs/CONTINUE.md` before continuing development. The project chat archive is published at `docs/chat-archive/Movasaq-Windows-Transfer.zip`. Extract it to `.device-transfer/` in this checkout so Codex can read the transcripts.
 
 Local secrets, dependencies and the `data/` SQLite directory are excluded from Git. A new checkout starts with seeded content. Existing live data must be transferred separately with the server stopped. No local database or `.env` was present when this handoff was prepared.

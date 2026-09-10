@@ -22,7 +22,7 @@ Build a Persian RTL React website for موسسه حفاظتی مراقبتی م�
 
 ## Chat continuity
 
-The two project conversations are “Build Movassaq security website” and the GitHub/device-transfer task. A separate private ZIP contains their readable user/assistant transcripts as a point-in-time snapshot. Copy it to the new computer and extract it under `.device-transfer/` in this project.
+The two project conversations are “Build Movassaq security website” and the GitHub/device-transfer task. `docs/chat-archive/Movasaq-Windows-Transfer.zip` contains their readable user/assistant transcripts as a point-in-time snapshot, published to this public repository at the user's request. Extract it under `.device-transfer/` in this project. The snapshot predates the final GitHub push confirmation and the request to publish the archive.
 
 In Codex on the new computer, open the cloned folder and send:
 
