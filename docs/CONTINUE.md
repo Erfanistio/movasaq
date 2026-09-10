@@ -1,31 +1,36 @@
-# Development handoff — 2026-09-10
+﻿# Development handoff — 2026-09-11
 
-## Requested product
+## Product and recovered context
 
-Build a Persian RTL React website for موسسه حفاظتی مراقبتی موثق, inspired by https://harimimen.com/, with reusable components, all main public page types, an admin content panel, a self-defence equipment store, and courses/certificates related to پلیس یار. The supplied regulation is in `public/regulations.txt`.
+Persian RTL React website for موسسه حفاظتی مراقبتی موثق with public services, company pages, training, equipment store, applications, tracking, certificates and an admin CMS. The original conversations have been extracted to ignored `.device-transfer/chats/`. Their source archive remains in `docs/chat-archive/`.
 
-## Current implementation
+## Completed in this checkout
 
-- React routes and reusable components are in `src/`; navy/gold responsive styles are in `src/styles.css`.
-- Express routes, administrator authentication, SQLite storage and seed content are in `server/`.
-- Public workflows include services, training, store/cart, applications, tracking and certificate verification.
-- Orders use manual review; no payment provider is configured.
-- The original build task was interrupted while resolving dependency installation problems. Do not assume the application is fully tested or production-ready.
+- Cloned `main` at `46e4110` and read both project transcripts.
+- Installed dependencies and generated `package-lock.json`; Node.js 24 or newer is required for SQLite.
+- Updated the old baseline-browser-mapping override; installation audit reports zero vulnerabilities.
+- Production build passes.
+- Added seven isolated API workflow tests covering authentication/logout, CMS publication/deletion, applications/tracking, server-calculated order prices, stock transitions and rollback, certificate issuance/revocation, and malformed inputs.
+- Fixed content type validation, malformed order lines, request body errors, invalid origin handling, certificate date validation and whitespace in certificate names.
+- Added Chrome browser tests for desktop (1440px) and mobile (390px), covering 26 routes, images, horizontal overflow, checkout/tracking, enrollment/careers, admin publication and certificate verification. Tests use an in-memory database and generated temporary credentials.
 
-## Next work
+## Run and verify
 
-1. Install dependencies successfully and commit the resulting package lockfile.
-2. Build and run the app; investigate any installation or compilation errors.
-3. Check desktop and mobile pages, admin login/editing, store/cart/orders, applications, tracking and certificates.
-4. Add meaningful workflow tests. The `test` script currently targets `tests/*.test.js`, but no tests were present at handoff.
-5. Check placeholder content and images, then complete the remaining implementation with the user.
+On Windows use `npm.cmd` if PowerShell blocks the unsigned npm.ps1 wrapper.
 
-## Chat continuity
+```powershell
+npm.cmd ci
+npm.cmd test
+npm.cmd run build
+npm.cmd run test:browser
+npm.cmd run dev
+```
 
-The two project conversations are “Build Movassaq security website” and the GitHub/device-transfer task. `docs/chat-archive/Movasaq-Windows-Transfer.zip` contains their readable user/assistant transcripts as a point-in-time snapshot, published to this public repository at the user's request. Extract it under `.device-transfer/` in this project. The snapshot predates the final GitHub push confirmation and the request to publish the archive.
+Browser tests require Google Chrome installed. Screenshots and failure traces are written to ignored `test-results/`. Browser tests use port 3101; the normal API uses 3001 and Vite uses 5173. The in-app browser was unavailable in this session, so automated checks used headless Chrome.
 
-In Codex on the new computer, open the cloned folder and send:
+## Remaining product work
 
-> Read docs/CONTINUE.md and all chat transcripts in .device-transfer/. Continue the Movasaq website from its saved state, beginning with dependency installation, build verification, and checking the unfinished workflows.
-
-The transcript archive supplies context to a new task; it is not a native sidebar-history import. Running processes and the active agent session have not been moved. Start the development server on the new computer using the README commands.
+- Obtain actual contact details, official company history/director text, license documents, gallery photos, and the confirmed product catalog/prices. Seed content includes illustrative photos and sample products/prices; licenses and gallery are empty.
+- Orders currently use manual review. Stock is deducted when an admin approves an order and restored on cancellation. No payment provider is configured.
+- Choose hosting and configure production HTTPS, persistent SQLite storage, backups and production credentials before deployment.
+- Keep `.env`, `data/`, dependencies and extracted chat copies out of Git. Tests do not use the working database.
